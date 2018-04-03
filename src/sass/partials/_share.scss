@@ -1,0 +1,68 @@
+.road-share__wrapper {
+    position: absolute;
+    margin-top: -37px;
+    right: 0;
+
+    @include mq(tablet) {
+        left: 0;
+    }
+
+    @include mq(desktop) {
+        margin-top: 0;
+    }
+}
+
+.road-share {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+
+    @include mq(tablet) {
+        position: absolute;
+        right: 90px;
+    }
+
+    @include mq(desktop) {
+        right: 20px;
+    }
+
+    @include mq(leftCol) {
+        right: auto;
+        left: 32px;
+    }
+
+    @include mq(wide) {
+        left: 112px;
+    }
+
+    .svg {
+        fill: $c-red;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+}
+
+.road-share__button {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 4px;
+    border-radius: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    @include mq(desktop) {
+        width: 38px;
+        height: 38px;
+    }
+
+    &:hover {
+        background-color: $c-red;
+        border-color: $c-red;
+
+        .svg {
+            fill: $c-white;
+        }
+    }
+}

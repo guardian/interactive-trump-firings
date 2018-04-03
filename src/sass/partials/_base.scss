@@ -1,0 +1,122 @@
+.content, .article__body, .element-atom {
+    background-color: $c-background !important;
+}
+
+figure.element-atom {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.js-most-popular-footer,
+.fc-container--has-show-more {
+    background-color: $c-white;
+}
+
+// this fixes margin issues on apps
+figure.element-atom,
+figure.interactive-atom {
+    margin: 0;
+//     overflow: hidden;
+    height: 100%;
+}
+
+
+// adds rule to page
+.content .gs-container:before {
+    @include mq(leftCol) {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 170px;
+        height: 100%;
+        width: 0.0625rem;
+        background: $c-red;
+        z-index: 20;
+    }
+
+    @include mq(wide) {
+        left: 250px;
+    }
+}
+
+// stops the super wide header from causing scroll
+.content__main {
+    overflow: hidden;
+}
+
+// hides generic head
+.article__header,
+.content__head,
+.gs-container.u-cf {
+    display: none !important;
+}
+
+// compensate for padding on apps
+.article__body {
+    padding: 0 10px !important;
+
+    @include mq(mobileLandscape) {
+        padding: 0 20px !important;
+    }
+}
+
+.is-immersive-interactive .l-footer {
+    display: block !important;
+}
+
+// remove styling from lists on app
+.prose ul {
+    margin: 0;
+
+    li:before {
+        display: none !important;
+    }
+}
+
+.element {
+    .gs-container {
+        box-sizing: border-box;
+    }
+}
+
+.gs-container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+@include mq(mobileLandscape) {
+    .gs-container {
+        padding: 0 20px;
+    }
+}
+
+@include mq(tablet) {
+    .gs-container {
+        max-width: 740px;
+    }
+}
+
+@include mq(desktop) {
+    .gs-container {
+        max-width: 980px;
+    }
+}
+
+@include mq(leftCol) {
+    .gs-container {
+        max-width: 1140px;
+    }
+}
+
+@include mq(wide) {
+    .gs-container {
+        max-width: 1300px;
+    }
+}
+
+.l-side-margins:after, .l-side-margins:before {
+    z-index: 30;
+    background-color: transparent;
+}
