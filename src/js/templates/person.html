@@ -1,0 +1,25 @@
+<div class='fire-person'>
+    <div class='fire-person__focus'>
+        <div class='fire-person__avatar'>
+            <img class='fire-person__image' src='{{ gridLink }}'>
+        </div>
+
+        <div class='fire-person__active'>
+            <h3 class='fire-person__active-count'>{{ daysActive }}</h3>
+            <span class='fire-person__active-label'>days in the job</span>
+        </div>
+    </div>
+    <div class='fire-person__content'>
+        <h2 class='fire-person__name'>{{ name }}</h2>
+        <h2 class='fire-person__status'>{{ status }}</h2>
+        
+<!--         Make this actually dynamic -->
+        <h3 class='fire-person__position'>Trump's {{ positionCount }}<sup>{{ suffix positionCount }}</sup> {{ position }}</h3> 
+
+        <div class='fire-person__copy'>
+            {{ copy }}
+        </div>
+
+        <a class='fire-person__link' href='{{ link }}'>Read more</a>
+    </div>
+</div>

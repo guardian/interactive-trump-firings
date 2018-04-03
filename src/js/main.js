@@ -1,6 +1,5 @@
-var caps = require('./modules/caps.js');
 var share = require('./modules/share.js');
-var photos = require('./modules/photos.js');
+var data = require('./modules/data.js');
 
-caps.init();
 share.init();
+data.init();

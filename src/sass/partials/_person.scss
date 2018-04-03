@@ -1,0 +1,104 @@
+.fire-person {
+    display: flex;
+    width: 540px;
+    margin-bottom: 48px;
+}
+
+.fire-person__focus {
+    margin-top: 8px;
+    margin-right: -64px;
+}
+
+.fire-person__avatar {
+    position: relative;
+    z-index: 2;
+    width: 128px;
+    height: 128px;
+    border-radius: 64px;
+    background-color: $c-light-red;
+    overflow: hidden;
+}
+
+.fire-person__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.fire-person__active {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    border-radius: 64px;
+    background-color: $c-black;
+    overflow: hidden;
+    margin-top: -24px;
+}
+
+.fire-person__active-count {
+    margin-top: 48px;
+    font-family: 'Guardian Figures';
+    font-size: 48px;
+    color: $c-white;
+    text-align: center;
+}
+
+.fire-person__active-label {
+    display: block;
+    font-family: 'Guardian Egyptian Web';
+    color: $c-light-red;
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+}
+
+.fire-person__content {
+    flex-grow: 2;
+    border: 1px solid $c-red;
+    background-color: $c-white;
+    padding: 10px 10px 10px 74px;
+}
+
+.fire-person__name,
+.fire-person__status {
+    font-family: 'Guardian Egyptian Web';
+    font-size: 20px;
+    line-height: 1.2;
+    color: $c-red;
+    margin: 0;
+}
+
+.fire-person__status {
+    color: $c-black;
+    margin-bottom: 12px;
+}
+
+.fire-person__position {
+    margin: 0;
+    font-family: 'Guardian Egyptian Web';
+    color: $c-black;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid $c-grey;
+}
+
+.fire-person__link {
+    font-family: 'Guardian Sans Web';
+    font-size: 16px;
+    color: $c-red;
+    padding-right: 20px;
+    background-image: url('@@assetPath@@/assets/images/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right 2px center;
+    transition: background 0.2s linear;
+
+    &:hover {
+        text-decoration: none;
+        background-position: right center;
+    }
+}
