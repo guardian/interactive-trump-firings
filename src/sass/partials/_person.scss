@@ -133,6 +133,16 @@
     border-bottom: 1px solid $c-grey;
 }
 
+.fire-person__copy {
+    font-family: 'Guardian Text Egyptian Web';
+    font-size: 16px;
+    line-height: 22px;
+
+    p {
+        margin-bottom: 18px;
+    }
+}
+
 .fire-person__link {
     font-family: 'Guardian Sans Web';
     font-size: 16px;

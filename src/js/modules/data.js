@@ -47,6 +47,7 @@ module.exports =  {
                 person.started = this.calculateDate(person.started);
                 person.left = this.calculateDate(person.left);
                 person.daysActive = this.calculateDifference(person.started, person.left);
+                person.gridLink = this.convertGridToUrl(person.gridLink);
             }
         }
 
@@ -109,6 +110,13 @@ module.exports =  {
         window.stats.push(this.getShortestStint());
         window.stats.push(this.getProflicDay());
         console.log(stats);
+    },
+
+    convertGridToUrl: function(gridUrl) {
+        // https://media.gutools.co.uk/images/e6519c921186c8511a688036b061bd749090d740?crop=1192_0_1355_1355
+        // https://media.guim.co.uk/e6519c921186c8511a688036b061bd749090d740/1192_0_1355_1355/140.jpg
+
+        return gridUrl.replace('gutools.co.uk', 'guim.co.uk').replace('images/', '').replace('?crop=', '/') + '/140.jpg';
     },
 
     getWorstPosition: function() {
