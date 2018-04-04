@@ -1,0 +1,17 @@
+.fire-content__title {
+    position: relative;
+    display: inline;
+    color: $c-white;
+    padding: .1em 0px .2em;
+    background: linear-gradient($c-black, $c-black) no-repeat;
+    box-shadow: .2em 0 0 $c-black, -.2em 0 0 $c-black;
+    top: -1px;
+    font-family: 'Guardian Egyptian Web';
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.fire-content__cards,
+.fire-content__stats {
+    margin: 12px 0 24px;
+}

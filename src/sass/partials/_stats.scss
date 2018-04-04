@@ -1,0 +1,30 @@
+.fire-stat {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.fire-stat__number {
+    font-family: 'Guardian Figures';
+    font-size: 48px;
+    line-height: 1.1;
+    color: $c-red;
+    margin-right: 6px;
+}
+
+.fire-stat__label {
+    font-family: 'Guardian Egyptian Web';
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.fire-stat__label-fact {
+    color: $c-red;
+    font-weight: bold;
+    display: block;
+}
+
+.fire-stat__label-detail {
+    color: $c-black;
+    font-weight: normal;
+    font-style: italic;
+}

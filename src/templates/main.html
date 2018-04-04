@@ -6,7 +6,22 @@
             <div class='fire-content__content'>
                 {{> templates/partials/intro }}
 
-                <div class='js-fire'></div>
+                <div class='fire-injected js-fire'>
+                    <div class='fire-content fire-content--latest'>
+                        <h2 class='fire-content__title'>Latest departure</h2>
+                        <div class='fire-content__cards js-latest'></div>
+                    </div>
+
+                    <div class='fire-content fire-content--numbers'>
+                        <h2 class='fire-content__title'>In numbers</h2>
+                        <div class='fire-content__stats js-numbers'></div>
+                    </div>
+
+                    <div class='fire-content fire-content--all'>
+                        <h2 class='fire-content__title'>Complete list</h2>
+                        <div class='fire-content__cards js-all'></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -26,6 +26,14 @@
 
 }
 
+.fire-injected {
+    display: none;
+
+    &.is-visible {
+        display: block;
+    }
+}
+
 figure.element-atom {
     margin-top: 0;
     margin-bottom: 0;
