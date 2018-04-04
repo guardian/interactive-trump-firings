@@ -6,12 +6,12 @@
     position: relative;
     max-width: 620px;
 
-    @include mq(leftCol) {
+    @include mq(desktop) {
         margin-left: 160px;
     }
 
     &:before {
-        @include mq(leftCol) {
+        @include mq(desktop) {
             content: '';
             position: absolute;
             top: 0;

@@ -1,22 +1,44 @@
 .fire-person {
     display: flex;
-    width: 540px;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+
+    @include mq(tablet) {
+        width: 540px;
+        margin-bottom: 48px;
+    }
+
+    @include mq(leftCol,wide) {
+        width: 494px;
+    }
 }
 
 .fire-person__focus {
     margin-top: 8px;
-    margin-right: -64px;
+    margin-right: -36px;
+
+    @include mq(tablet) {
+        margin-right: -64px;
+    }
+}
+
+.fire-person__avatar,
+.fire-person__active {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    border-radius: 64px;
+    overflow: hidden;
+
+    @include mq(tablet) {
+        width: 128px;
+        height: 128px;
+    }
 }
 
 .fire-person__avatar {
-    position: relative;
     z-index: 2;
-    width: 128px;
-    height: 128px;
-    border-radius: 64px;
     background-color: $c-light-red;
-    overflow: hidden;
 }
 
 .fire-person__image {
@@ -28,37 +50,61 @@
 }
 
 .fire-person__active {
-    position: relative;
-    width: 128px;
-    height: 128px;
-    border-radius: 64px;
     background-color: $c-black;
-    overflow: hidden;
-    margin-top: -24px;
+    margin-top: -20px;
+    margin-bottom: 8px;
+
+    @include mq(tablet) {
+        margin-top: -24px;
+    }
 }
 
 .fire-person__active-count {
-    margin-top: 48px;
+    margin-top: 24px;
     font-family: 'Guardian Figures';
-    font-size: 48px;
+    font-size: 28px;
     color: $c-white;
     text-align: center;
+    margin-bottom: 0;
+
+    @include mq(tablet) {
+        margin-top: 48px;
+        font-size: 48px;
+    }
 }
 
 .fire-person__active-label {
     display: block;
     font-family: 'Guardian Egyptian Web';
     color: $c-light-red;
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1;
     text-align: center;
     font-style: italic;
+
+    @include mq(tablet) {
+        font-size: 15px;
+        margin-top: 9px;
+    }
+
+    span {
+        display: none;
+
+        @include mq(tablet) {
+            display: inline;
+        }
+    }
 }
 
 .fire-person__content {
     flex-grow: 2;
     border: 1px solid $c-red;
     background-color: $c-white;
-    padding: 10px 10px 10px 74px;
+    padding: 10px 10px 10px 46px;
+
+    @include mq(tablet) {
+        padding-left: 74px;
+    }
 }
 
 .fire-person__name,

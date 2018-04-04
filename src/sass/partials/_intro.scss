@@ -49,7 +49,7 @@
     position: absolute;
     right: 0;
 
-    @include mq(leftCol) {
+    @include mq(desktop) {
         right: auto;
         left: -160px;
     }
