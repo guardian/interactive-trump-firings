@@ -46,13 +46,50 @@
     }
 }
 
+.fire-header__scroll {
+    overflow-x: scroll;
+    backface-visibility: hidden;
+        margin: 0 137px;
+}
+
 .fire-header__people {
     list-style: none;
     margin: 0;
     padding: 0;
-    height: 260px;
+    display: flex;
 }
 
 .fire-header__person {
-    
+    width: 230px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.fire-header__person-image {
+    width: 100%;
+    height: auto;
+}
+
+.fire-header__person-details {
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid $c-white;
+}
+
+.fire-header__person-name,
+.fire-header__person-stat {
+    font-family: 'Guardian Egyptian Web';
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.fire-header__person-name {
+    color: $c-white;
+    font-weight: bold;
+}
+
+.fire-header__person-stat {
+    font-style: italic;
+    color: $c-black;
 }
