@@ -155,7 +155,7 @@ module.exports =  {
     },
 
     animateHeader: function() {
-        var scrollSpeed = $('.fire-header__scroll').scrollLeft() * 3;
+        var scrollSpeed = $('.fire-header__scroll').scrollLeft() * 4;
 
         $('.fire-header__scroll').animate({scrollLeft: 0}, scrollSpeed, 'linear', function() {
             $('.fire-header__scroll').scrollLeft(30000);
