@@ -38,7 +38,7 @@
 
 .fire-person__avatar {
     z-index: 2;
-    background-color: $c-light-red;
+    background-color: transparent;
 }
 
 .fire-person__image {
@@ -47,6 +47,8 @@
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .fire-person__active {
