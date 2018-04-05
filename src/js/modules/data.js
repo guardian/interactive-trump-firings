@@ -12,6 +12,16 @@ module.exports =  {
         this.getData();
     },
 
+    bindings: function() {
+        $('.fire-header__scroll').mouseover(function() {
+            $('.fire-header__scroll').stop();
+        });
+
+        $('.fire-header__scroll').mouseleave(function() {
+            this.animateHeader();
+        }.bind(this));
+    },
+
     initHandlebars: function() {
         handlebars.registerHelper('handlise', function(string) {
             return string.replace(/ /g, '-').replace('?', '').replace(/&/, 'and').replace(/'/g, '').replace(':', '').replace('/', '').toLowerCase();
@@ -129,6 +139,7 @@ module.exports =  {
 
         this.showContent();
         this.triggerHeader();
+        this.bindings();
     },
 
     showContent: function() {
@@ -144,7 +155,9 @@ module.exports =  {
     },
 
     animateHeader: function() {
-        $('.fire-header__scroll').animate({scrollLeft: 0}, $('.fire-header__person').length * 1000, 'linear', function() {
+        var scrollSpeed = $('.fire-header__scroll').scrollLeft() * 3;
+
+        $('.fire-header__scroll').animate({scrollLeft: 0}, scrollSpeed, 'linear', function() {
             $('.fire-header__scroll').scrollLeft(30000);
             this.animateHeader();
         }.bind(this));
