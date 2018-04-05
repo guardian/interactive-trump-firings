@@ -1,4 +1,4 @@
-var $ = require('../vendor/jquery.js');
+window.$ = require('../vendor/jquery.js');
 window.handlebars = require('handlebars');
 
 var positions = [{
@@ -106,7 +106,6 @@ module.exports =  {
 
     injectHTML: function() {
         this.addCards();
-        this.showContent();
     },
 
     addCards: function() {
@@ -117,21 +116,30 @@ module.exports =  {
         var headerTemplate = handlebars.compile(headerHtml);
 
         for (var i in data) {
-            $('.js-header').append(headerTemplate(data[i]));
+            if (data[i].fact) {
+                $('.js-header').append(headerTemplate(data[i]));
+            }
+
             if (i == 0) {
                 $('.js-latest').append(personTemplate(data[i]));
             } else {
                 $('.js-all').append(personTemplate(data[i]));
             }
         }
+
+        this.showContent();
+        this.triggerHeader();
     },
 
     showContent: function() {
-        this.triggerHeader();
         $('.js-fire').addClass('is-visible');
     },
 
     triggerHeader: function() {
-        $('.fire-header__scroll').scrollLeft(40000);
+        $('.fire-header__scroll').scrollLeft(30000);
+
+        setTimeout(function() {
+            $('.fire-header__scroll').animate({scrollLeft: 0}, $('.fire-header__person').length * 1000, 'linear');
+        }, 500);
     }
 };
