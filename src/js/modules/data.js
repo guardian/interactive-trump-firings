@@ -139,7 +139,14 @@ module.exports =  {
         $('.fire-header__scroll').scrollLeft(30000);
 
         setTimeout(function() {
-            $('.fire-header__scroll').animate({scrollLeft: 0}, $('.fire-header__person').length * 1000, 'linear');
-        }, 500);
+            this.animateHeader();
+        }.bind(this), 500);
+    },
+
+    animateHeader: function() {
+        $('.fire-header__scroll').animate({scrollLeft: 0}, $('.fire-header__person').length * 1000, 'linear', function() {
+            $('.fire-header__scroll').scrollLeft(30000);
+            this.animateHeader();
+        }.bind(this));
     }
 };
