@@ -1,14 +1,58 @@
-.fire__header {
+.fire-header {
     position: relative;
-    height: 0;
-    padding-top: 45%;
-    background-image: url('@@assetPath@@/assets/images/header.jpg');
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
     background-color: $c-light-red;
 
     .gs-container {
         height: 100%;
+        background-image: url('@@assetPath@@/assets/images/bg.jpg');
+        background-size: 100% auto;
+        background-position: center bottom;
+        background-repeat: no-repeat;
     }
+}
+
+.fire-header__headline-wrapper {
+    position: relative;
+    z-index: 22;
+    font-size: 28px;
+    line-height: 1.2;
+    max-width: 680px;
+    padding: 24px 0;
+
+    @include mq(tablet) {
+        font-size: 32px;
+    }
+
+    @include mq(desktop) {
+        font-size: 48px;
+        margin-left: 160px;
+        padding-bottom: 128px;
+    }
+}
+
+.fire-header__headline {
+    position: relative;
+    display: inline;
+    color: $c-light-red;
+    padding: 0 0 .1em 0;
+    background: linear-gradient($c-black, $c-black) no-repeat;
+    box-shadow: .2em 0 0 $c-black, -.2em 0 0 $c-black;
+    font-family: 'Guardian Egyptian Web';
+    font-size: inherit;
+    line-height: inherit;
+
+    span {
+        color: $c-white;
+    }
+}
+
+.fire-header__people {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 260px;
+}
+
+.fire-header__person {
+    
 }

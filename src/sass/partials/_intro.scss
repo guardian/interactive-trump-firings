@@ -1,42 +1,7 @@
 .fire-intro {
     position: relative;
+    padding-top: 12px;
     margin-bottom: 24px;
-}
-
-.fire-intro__headline-wrapper {
-    position: relative;
-    z-index: 22;
-    margin-top: -1.3em;
-    font-size: 28px;
-    line-height: 1.2;
-    max-width: 680px;
-    margin-bottom: 12px;
-    margin-left: -1px;
-
-    @include mq(tablet) {
-        font-size: 32px;
-    }
-
-    @include mq(desktop) {
-        font-size: 48px;
-    }
-}
-
-.fire-intro__headline {
-    position: relative;
-    display: inline;
-    color: $c-light-red;
-    padding: 0 0 .1em 0;
-    background: linear-gradient($c-black, $c-black) no-repeat;
-    box-shadow: .2em 0 0 $c-black, -.2em 0 0 $c-black;
-    top: -1px;
-    font-family: 'Guardian Egyptian Web';
-    font-size: inherit;
-    line-height: inherit;
-
-    span {
-        color: $c-white;
-    }
 }
 
 .fire-intro__meta {
