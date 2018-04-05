@@ -47,9 +47,15 @@
 }
 
 .fire-header__scroll {
-    overflow-x: scroll;
     backface-visibility: hidden;
-        margin: 0 137px;
+    margin: 0 137px;
+    -ms-overflow-style: none;  // IE 10+
+    overflow: -moz-scrollbars-none;  // Firefox
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar { 
+        display: none;  // Safari and Chrome
+    }
 }
 
 .fire-header__people {
