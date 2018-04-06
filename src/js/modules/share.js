@@ -1,17 +1,19 @@
 var $ = require('../vendor/jquery.js');
 
 var pageUrl = window.location.href.split('#')[0],
-    title = '‘I don\'t have to peak to win’: The unstoppable Mikaela Shiffrin wants it all';
+    title = 'The firings and the fury: a list of Trump\'s biggest resignations and firings so far';
 
 module.exports =  {
     init: function() {
-        this.setLinks('.road-share');
+        this.setLinks('.fire-intro__share');
     },
 
     setLinks: function(parent) {
-        $(parent + ' .shif-share__button--twitter a').attr('href', this.getTwitterLink());
-        $(parent + ' .shif-share__button--facebook a').attr('href', this.getFacebookLink());
-        $(parent + ' .shif-share__button--email a').attr('href', this.getEmailLink());
+        console.log($(parent + ' .fire-intro__share__button--twitter a'));
+        console.log(this.getTwitterLink());
+        $(parent + ' .fire-intro__share__button--twitter a').attr('href', this.getTwitterLink());
+        $(parent + ' .fire-intro__share__button--facebook a').attr('href', this.getFacebookLink());
+        $(parent + ' .fire-intro__share__button--email a').attr('href', this.getEmailLink());
     },
 
     getTwitterLink: function() {

@@ -22,6 +22,11 @@ module.exports =  {
         $('.fire-header__scroll').mouseleave(function() {
             this.animateHeader();
         }.bind(this));
+
+        $(window).resize(function() {
+            $('.fire-header__scroll').stop();
+            this.animateHeader();
+        }.bind(this));
     },
 
     initHandlebars: function() {
@@ -173,7 +178,7 @@ module.exports =  {
     },
 
     animateHeader: function() {
-        var scrollSpeed = $('.fire-header__scroll').scrollLeft() * 4;
+        var scrollSpeed = $('.fire-header__scroll').scrollLeft() * 6;
 
         $('.fire-header__scroll').animate({scrollLeft: 0}, scrollSpeed, 'linear', function() {
             $('.fire-header__scroll').scrollLeft(30000);
