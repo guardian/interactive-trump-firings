@@ -44,7 +44,14 @@ module.exports =  {
             } else {
                 return 'th'
             }
-        })
+        });
+
+        handlebars.registerHelper('guardianDate', function(date) { 
+            date = new Date(date);
+            months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+            return date.getDate() + ' ' + months[date.getMonth()];
+        });
     },
 
     getData: function() {
