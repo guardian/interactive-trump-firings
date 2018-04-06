@@ -87,6 +87,23 @@
     list-style: none;
     margin: 0;
     display: flex;
+    min-height: 30vw;
+
+    @include mq(tablet) {
+        min-height: 139px;
+    }
+
+    @include mq(desktop) {
+        min-height: 177px;
+    }
+
+    @include mq(leftCol) {
+        min-height: 227px;
+    }
+
+    @include mq(wide) {
+        min-height: 265px;
+    }
 }
 
 .fire-header__person {

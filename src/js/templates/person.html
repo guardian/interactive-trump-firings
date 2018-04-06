@@ -18,6 +18,8 @@
             {{ copy }}
         </div>
 
-        <a class='fire-person__link' href='{{ link }}'>Read more</a>
+        {{#if link }}
+            <a class='fire-person__link' href='{{ link }}'>Read more</a>
+        {{/if}}
     </div>
 </div>
