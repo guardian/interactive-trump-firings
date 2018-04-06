@@ -1,5 +1,3 @@
-var $ = require('../vendor/jquery.js');
-
 module.exports =  {
     convert: function(timestamp) {
         var now = new Date(),

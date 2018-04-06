@@ -1,5 +1,3 @@
-var $ = require('../vendor/jquery.js');
-
 var pageUrl = window.location.href.split('#')[0],
     title = 'The firings and the fury: a list of Trump\'s biggest resignations and firings so far';
 

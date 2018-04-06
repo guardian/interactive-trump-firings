@@ -1,4 +1,3 @@
-window.$ = require('../vendor/jquery.js');
 window.handlebars = require('handlebars');
 
 var lastUpdated = require('../modules/lastUpdated.js');
