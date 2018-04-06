@@ -22,16 +22,17 @@
     font-size: 28px;
     line-height: 1.2;
     max-width: 680px;
-    padding: 24px 0;
+    padding: 12px 0 98px;
 
     @include mq(tablet) {
         font-size: 32px;
+        padding: 24px 0 98px;
     }
 
     @include mq(desktop) {
         font-size: 48px;
         margin-left: 160px;
-        padding-bottom: 128px;
+        padding-bottom: 168px;
     }
 }
 
@@ -87,7 +88,7 @@
     list-style: none;
     margin: 0;
     display: flex;
-    min-height: 30vw;
+    min-height: 29vw;
 
     @include mq(tablet) {
         min-height: 139px;

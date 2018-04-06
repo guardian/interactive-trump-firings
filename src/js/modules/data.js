@@ -69,6 +69,8 @@ module.exports =  {
             return a.left - b.left;
         });
 
+        this.populateCount();
+
         // calculate positions
         for (var i = 0; i < data.length; i++) {
             var person = data[i];
@@ -140,6 +142,11 @@ module.exports =  {
         this.showContent();
         this.triggerHeader();
         this.bindings();
+    },
+
+    populateCount: function() {
+        console.log(data);
+        $('.js-count').text(data.length);
     },
 
     showContent: function() {
