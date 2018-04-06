@@ -55,8 +55,8 @@
 .fire-header__scroll {
     backface-visibility: hidden;
     -ms-overflow-style: none;  // IE 10+
-    overflow: -moz-scrollbars-none;  // Firefox
     overflow-x: scroll;
+    overflow: -moz-scrollbars-none;  // Firefox
     margin: 0 7.5%;
 
     @include mq(mobileLandscape) {

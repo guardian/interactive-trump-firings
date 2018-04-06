@@ -1,6 +1,8 @@
 window.$ = require('../vendor/jquery.js');
 window.handlebars = require('handlebars');
 
+var lastUpdated = require('../modules/lastUpdated.js');
+
 var positions = [{
     position: 'The President',
     count: 1
@@ -43,6 +45,7 @@ module.exports =  {
     getData: function() {
         $.getJSON('https://interactive.guim.co.uk/docsdata-test/1Ywecbu_yhO0EQ2_BqU-V8HPH935eJb7H-_yfhsjy3DE.json', function(response) {
             window.data = response.sheets.people;
+            this.populateLastUpdated(response.sheets.meta[0].lastUpdated);
             this.cleanData();
         }.bind(this));
     },
@@ -145,8 +148,16 @@ module.exports =  {
     },
 
     populateCount: function() {
-        console.log(data);
         $('.js-count').text(data.length);
+    },
+
+    populateLastUpdated: function(date) {
+
+        var text = lastUpdated.convert(date);
+        console.log(lastUpdated);
+        console.log(text);
+        $('.js-last-updated').text(text);
+        console.log(date);
     },
 
     showContent: function() {
