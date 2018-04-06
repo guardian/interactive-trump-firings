@@ -9,8 +9,6 @@ module.exports =  {
     },
 
     setLinks: function(parent) {
-        console.log($(parent + ' .fire-intro__share__button--twitter a'));
-        console.log(this.getTwitterLink());
         $(parent + ' .fire-intro__share__button--twitter a').attr('href', this.getTwitterLink());
         $(parent + ' .fire-intro__share__button--facebook a').attr('href', this.getFacebookLink());
         $(parent + ' .fire-intro__share__button--email a').attr('href', this.getEmailLink());

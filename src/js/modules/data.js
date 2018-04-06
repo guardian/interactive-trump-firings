@@ -157,12 +157,7 @@ module.exports =  {
     },
 
     populateLastUpdated: function(date) {
-
-        var text = lastUpdated.convert(date);
-        console.log(lastUpdated);
-        console.log(text);
-        $('.js-last-updated').text(text);
-        console.log(date);
+        $('.js-last-updated').text(lastUpdated.convert(date));
     },
 
     showContent: function() {
