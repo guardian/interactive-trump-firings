@@ -4,10 +4,15 @@
 
     .gs-container {
         height: 100%;
-        background-image: url('@@assetPath@@/assets/images/bg.jpg');
-        background-size: 100% auto;
+        background-image: url('@@assetPath@@/assets/images/bg-mobile.jpg');
+        background-size: 116% auto;
         background-position: center bottom;
         background-repeat: no-repeat;
+
+        @include mq(tablet) {
+            background-image: url('@@assetPath@@/assets/images/bg.jpg');
+            background-size: 100% auto;
+        }
     }
 }
 
@@ -48,10 +53,30 @@
 
 .fire-header__scroll {
     backface-visibility: hidden;
-    margin: 0 137px;
     -ms-overflow-style: none;  // IE 10+
     overflow: -moz-scrollbars-none;  // Firefox
     overflow-x: scroll;
+    margin: 0 7.5%;
+
+    @include mq(mobileLandscape) {
+        margin: 0 6.5%;
+    }
+
+    @include mq(tablet) {
+        margin: 0 70px;
+    }
+
+    @include mq(desktop) {
+        margin: 0 98px;
+    }
+
+    @include mq(leftCol) {
+        margin: 0 118px;
+    }
+
+    @include mq(wide) {
+        margin: 0 137px;
+    }
 
     &::-webkit-scrollbar { 
         display: none;  // Safari and Chrome
@@ -68,7 +93,23 @@
     margin-right: 40px;
     flex-shrink: 0;
     flex-grow: 0;
-    width: 230px;
+    width: 30%;
+
+    @include mq(tablet) {
+        width: 110px;
+    }
+
+    @include mq(desktop) {
+        width: 140px;
+    }
+
+    @include mq(leftCol) {
+        width: 180px;
+    }
+
+    @include mq(wide) {
+        width: 210px;
+    }
 
     &:first-of-type {
         padding-left: 100%;
