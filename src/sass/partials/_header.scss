@@ -58,6 +58,7 @@
     overflow-x: scroll;
     overflow: -moz-scrollbars-none;  // Firefox
     margin: 0 7.5%;
+    cursor: ew-resize;
 
     @include mq(mobileLandscape) {
         margin: 0 6.5%;
@@ -96,6 +97,7 @@
 
     @include mq(desktop) {
         min-height: 177px;
+        padding-top: 80px;
     }
 
     @include mq(leftCol) {
@@ -141,6 +143,11 @@
 
     &:hover {
         transform: translateY(0);
+
+        .fire-header__person-details {
+            opacity: 1;
+            transform: translateY(-100%);
+        }
     }
 }
 
@@ -152,9 +159,15 @@
 }
 
 .fire-header__person-details {
+    position: absolute;
+    top: 0;
     margin-bottom: 12px;
     padding-bottom: 6px;
     border-bottom: 1px solid $c-white;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s linear, transform 0.4s ease-out;
+    transform: translateY(0);
 }
 
 .fire-header__person-name,
