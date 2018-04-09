@@ -26,6 +26,12 @@ module.exports =  {
             $('.fire-header__scroll').stop();
             this.animateHeader();
         }.bind(this));
+
+        $('.fire-header__link').click(function(e) {
+            e.preventDefault();
+            this.scrollTo(e.currentTarget);
+            console.log('hey');
+        }.bind(this));
     },
 
     initHandlebars: function() {
@@ -179,11 +185,21 @@ module.exports =  {
     },
 
     animateHeader: function() {
-        var scrollSpeed = $('.fire-header__scroll').scrollLeft() * 6;
+        var width = $(window).width();
+        var speedModifer = width > 760 ? 7 : 10;
+        var scrollSpeed = $('.fire-header__scroll').scrollLeft() * speedModifer;
 
         $('.fire-header__scroll').animate({scrollLeft: 0}, scrollSpeed, 'linear', function() {
             $('.fire-header__scroll').scrollLeft(30000);
             this.animateHeader();
         }.bind(this));
+    },
+
+    scrollTo: function(person) {
+        var target = $(person).attr('href');
+
+        $('html, body').animate({
+            scrollTop: $(target).offset().top - 20
+        }, 1000);
     }
 };

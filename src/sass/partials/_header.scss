@@ -145,10 +145,10 @@
     }
 
     &:hover {
-        transform: translateY(0);
+        @include mq(desktop) {
+            transform: translateY(0);
 
-        .fire-header__person-details {
-            @include mq(desktop) {
+            .fire-header__person-details {
                 opacity: 1;
                 transform: translateY(-100%);
             }
