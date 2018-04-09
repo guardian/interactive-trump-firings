@@ -11,6 +11,12 @@
     @include mq(leftCol,wide) {
         width: 494px;
     }
+
+    &.is-active {
+        .fire-person__content {
+            background-color: $c-grey;
+        }
+    }
 }
 
 .fire-person__focus {
@@ -103,6 +109,7 @@
     border: 1px solid $c-red;
     background-color: $c-white;
     padding: 10px 10px 10px 46px;
+    transition: all 0.5s linear;
 
     @include mq(tablet) {
         padding-left: 74px;

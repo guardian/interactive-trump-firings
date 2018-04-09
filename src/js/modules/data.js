@@ -201,5 +201,11 @@ module.exports =  {
         $('html, body').animate({
             scrollTop: $(target).offset().top - 20
         }, 1000);
+
+        $(target).addClass('is-active');
+
+        setTimeout(function() {
+            $('.is-active').removeClass('is-active');
+        }, 1500)
     }
 };
