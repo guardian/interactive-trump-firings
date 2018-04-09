@@ -56,6 +56,7 @@
     backface-visibility: hidden;
     -ms-overflow-style: none;  // IE 10+
     overflow-x: scroll;
+    overflow-y: hidden;
     overflow: -moz-scrollbars-none;  // Firefox
     margin: 0 7.5%;
     cursor: ew-resize;
@@ -110,6 +111,7 @@
 }
 
 .fire-header__person {
+    display: flex;
     margin-right: 40px;
     flex-shrink: 0;
     flex-grow: 0;
@@ -153,11 +155,24 @@
     }
 }
 
+.fire-header__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 .fire-header__person-image {
     width: 100%;
     height: auto;
     display: block;
     padding-top: 2px;
+    align-self: flex-end;
 }
 
 .fire-header__person-details {
@@ -188,15 +203,4 @@
 .fire-header__person-fact {
     font-style: italic;
     color: $c-black;
-}
-
-.fire-header__link {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-
-    &:hover {
-        text-decoration: none;
-    }
 }
