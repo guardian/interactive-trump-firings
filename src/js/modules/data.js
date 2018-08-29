@@ -60,7 +60,7 @@ module.exports =  {
     },
 
     getData: function() {
-        $.getJSON('https://interactive.guim.co.uk/docsdata/1Ywecbu_yhO0EQ2_BqU-V8HPH935eJb7H-_yfhsjy3DE.json', function(response) {
+        $.getJSON('https://interactive.guim.co.uk/docsdata-test/1Ywecbu_yhO0EQ2_BqU-V8HPH935eJb7H-_yfhsjy3DE.json', function(response) {
             window.data = response.sheets.people;
             this.populateLastUpdated(response.sheets.meta[0].lastUpdated);
             this.cleanData();

@@ -48,4 +48,15 @@
     p {
         margin-bottom: 18px;
     }
+
+    a {
+        border-bottom: 1px solid $c-black;
+        color: $c-red;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            border-bottom-color: $c-red;
+        }
+    }
 }
